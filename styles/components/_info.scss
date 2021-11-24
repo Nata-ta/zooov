@@ -1,0 +1,76 @@
+@import '../common/vars';
+
+.info {
+    padding: 80px 0;
+    background-color: $lavender-blush;
+    overflow: hidden;
+    @include b(tablet) {
+        padding: 53px 0 41px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin: 0 -30px;
+        @include b(tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 30px;
+        @include b(tablet) {
+            width: 100%;
+        }
+
+        &--content {
+            @include b(tablet) {
+                margin-bottom: 76px;
+            }
+        }
+    }
+
+    &__images {
+        position: relative;
+        padding-bottom: 32%;
+        @include b(tablet) {
+            padding-bottom: 30%;
+        }
+    }
+
+    &__img-back {
+        width: 85%;
+        @include b(tablet) {
+            width: 80%;
+        }
+    }
+
+    &__img-top {
+        position: absolute;
+        width: 65%;
+        bottom: 0;
+        right: 0;
+        @include b(tablet) {
+            width: 62%;
+        }
+    }
+
+    &__caption {
+        max-width: 416px;
+        margin-bottom: 40px;
+        @include b(tablet) {
+            margin-bottom: 24px;
+            max-width: 100%;    
+        }
+    }
+
+    &__text {
+        margin-bottom: 21px;
+        color: $secondary-color;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

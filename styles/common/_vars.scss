@@ -1,0 +1,53 @@
+$main-fz: 16px;
+$main-fw: 400;
+$main-lh: 1.4;
+$main-ff: 'Montserrat', Arial, Helvetica, sans-serif;
+$secondary-ff: 'Oswald', Arial, Helvetica, sans-serif;
+
+$main-color: #000;
+$secondary-color: #434242;
+$primary-color: #961914;
+$white-color: #fff;
+$queen-pink: #EAD1D0;
+$lavender-blush: #FFF4F3;
+
+$btn-color: $primary-color;
+$btn-hover: #75110D;
+$btn--ghost-hover: $queen-pink;
+$btn-light-text: #EC7973;
+$btn-light-color: #FFF4F3;
+$btn-light-hover: $queen-pink;
+$btn-opacity-color: rgba($white-color, .2);
+$btn-opacity-hover: rgba($btn-opacity-color, .4);
+
+$trs: all .3s;
+
+$mobile-low: 479px;
+$mobile-width: 767px;
+$tablet-width: 1024px;
+$desktop-width: 1366px;
+
+@mixin b($breakpoints) {
+  @if ($breakpoints == desktop) {
+    @media (max-width: #{$desktop-width}) {
+      @content
+    }
+  }
+  @if ($breakpoints == tablet) {
+    @media (max-width: #{$tablet-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile) {
+    @media (max-width: #{$mobile-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile-sm) {
+    @media (max-width: #{$mobile-low}) {
+      @content
+    }
+  } @else {
+    @media (max-width: $breakpoints + px) {
+      @content
+    }
+  }
+}

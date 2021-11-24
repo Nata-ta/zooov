@@ -1,0 +1,97 @@
+@import '../common/vars';
+
+.hero {
+    min-height: 100vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    position: relative;
+
+    &__header {
+        padding: 16px 0;
+    }
+
+    &__header-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        line-height: 0;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav-item {
+        padding: 0 25px;
+    }
+
+    &__nav-link {
+        font-weight: 500;
+        color: $white-color;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: $white-color;
+            transition: all .3s;
+        }
+
+        &:hover:before {
+            width: 100%;
+        }
+    }
+
+    &__body-wrap {
+        min-height: calc(100vh - 112px);
+        display: flex;
+        align-items: center;
+        padding: 20px 0 40px;
+    }
+
+    &__title {
+        font-family: $secondary-ff;
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 1.3;
+        letter-spacing: .02em;
+        color: $white-color;
+        max-width: 481px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__ellipse {
+        position: absolute;
+        top: 60px;
+        left: 221px;
+        width: 260px;
+        height: 92px;
+        z-index: -1;
+    }
+
+    &__descr {
+        max-width: 368px;
+        font-size: 20px;
+        color: $white-color;
+        margin-bottom: 38px;
+    }
+
+    &__zooov {
+        position: absolute;
+        top: 160px;
+        right: 0;
+        width: 168px;
+        height: 548px;
+    }
+    
+}
