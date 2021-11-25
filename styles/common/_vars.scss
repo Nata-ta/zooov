@@ -33,8 +33,8 @@ $desktop-width: 1366px;
   @if ($breakpoints == desktop) {
     @media (max-width: #{$desktop-width}) {
       @content
+      }
     }
-  }
   @if ($breakpoints == tablet) {
     @media (max-width: #{$tablet-width}) {
       @content
@@ -50,6 +50,6 @@ $desktop-width: 1366px;
   } @else {
     @media (max-width: $breakpoints + px) {
       @content
+      }
     }
-  }
 }

@@ -1,0 +1,151 @@
+@import '../common/vars';
+
+.footer {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 80px 0;
+    margin-top: 175px;
+    @include b(tablet) {
+        padding: 56px 0 242px;
+        margin-top: 20px;
+    }
+
+    &__wrap {
+        display: flex;
+        @include b(mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__contacts {
+        width: 302px;
+        @include b(mobile) {
+            width: 100%;
+        }
+
+        
+    }
+
+    &__form {
+        width: calc(100% - 302px);
+        padding: 0 7% 0 15%;
+        @include b(tablet) {
+            padding: 0 0 0 10%;
+        }
+
+        @include b(mobile) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__caption {
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        margin-bottom: 32px;
+    }
+
+    &__phone {
+        margin-bottom: 24px;
+    }
+
+    &__phone-link {
+        font-weight: 700;
+
+        &:hover {
+            color: $queen-pink;
+        }
+    }
+
+    &__btns {
+        margin-bottom: 40px;
+    }
+
+    &__contact-item {
+        margin-bottom: 16px;
+
+        .btn {
+            width: 223px;
+        }
+    }
+
+    &__descr {
+
+        &-link {
+            border-bottom: 1px solid currentColor;
+
+            &:hover {
+                color: $queen-pink;
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__text {
+        margin-bottom: 34px;
+        @include b(tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -12px 16px;
+        @include b(mobile-sm) {
+            display: block;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 12px;
+        @include b(mobile-sm) {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__message {
+        margin-bottom: 22px;
+        @include b(tablet) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include b(tablet) {
+            display: block;
+        }
+    }
+
+    &__check {
+        max-width: 210px;
+        margin-right: 10px;
+        @include b(tablet) {
+            max-width: 100%;
+            margin-bottom: 33px;
+            margin-right: 0;
+        }
+    }
+
+    &__send {
+        
+        .btn {
+            @include b(mobile-sm) {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}

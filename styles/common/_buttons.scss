@@ -1,7 +1,8 @@
 @import './vars';
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-family: $main-ff;
     font-size: $main-fz;
     line-height: $main-lh;
@@ -16,6 +17,11 @@
 
     &:hover {
         background-color: $btn-hover;
+    }
+
+    svg {
+        width: 24px;
+        margin-right: 8px;
     }
 
     &--ghost {
@@ -42,7 +48,7 @@
     }
 
     &--opacity {
-        padding: 10px 15px;
+        padding: 8px 12px;
         font-size: 14px;
         font-weight: 500;
         background-color: $btn-opacity-color;
