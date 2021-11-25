@@ -21,7 +21,6 @@
     }
 
     &__caption {
-        max-width: 326px;
         position: relative;
         z-index: 1;
     }
@@ -29,7 +28,7 @@
     &__ellipse {
         position: absolute;
         top: 0;
-        right: 10px;
+        right: -5px;
         width: 181px;
         height: 67px;
         z-index: -1;

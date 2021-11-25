@@ -1,0 +1,38 @@
+@import '../common/vars';
+
+.compute {
+    padding: 45px 0 90px;
+
+    &__outer {
+        padding: 53px 50px;
+        background-color: $queen-pink;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 1198px;
+        height: 194px;
+        z-index: -1;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__col {
+        padding-right: 70px;
+    }
+
+    &__text {
+        max-width: 705px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.4;
+    }
+}

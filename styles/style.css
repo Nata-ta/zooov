@@ -328,14 +328,13 @@ a {
   padding: 0 13px;
 }
 .order__caption {
-  max-width: 326px;
   position: relative;
   z-index: 1;
 }
 .order__ellipse {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: -5px;
   width: 181px;
   height: 67px;
   z-index: -1;
@@ -372,6 +371,38 @@ a {
 .order__body_text {
   color: #434242;
   margin-bottom: 11px;
+}
+
+.compute {
+  padding: 45px 0 90px;
+}
+.compute__outer {
+  padding: 53px 50px;
+  background-color: #EAD1D0;
+  position: relative;
+  z-index: 1;
+}
+.compute__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 1198px;
+  height: 194px;
+  z-index: -1;
+}
+.compute__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.compute__col {
+  padding-right: 70px;
+}
+.compute__text {
+  max-width: 705px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.4;
 }
 
 .info {
