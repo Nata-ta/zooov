@@ -1,0 +1,113 @@
+@import '../common/vars';
+
+.faq {
+    padding: 100px 0 175px;
+    @include b(tablet) {
+        padding: 40px 0 20px;
+    }
+
+    &__wrap {
+        display: flex;
+        @include b(tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        width: 29%;
+        @include b(tablet) {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__content {
+        width: 71%;
+        padding-left: 76px;
+        margin-top: -32px;
+        @include b(tablet) {
+            width: 100%;
+            padding-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid $grey;
+
+        &--active {
+            .faq {
+                &__head {
+                    padding-bottom: 12px;
+
+                    &::after {
+                        transform: rotate(0);
+                    }
+                }
+                &__box {
+                    display: block;
+                }
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__head {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 32px 50px 32px 0;
+        position: relative;
+        cursor: pointer;
+        transition: $trs;
+        @include b(tablet) {
+            padding: 24px 50px 24px 0;
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $primary-color;
+            border-radius: 2px;
+            top: 45px;
+            right: 15px;
+            @include b(tablet) {
+                top: 34px;
+            }
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+    }
+
+    &__box {
+        display: none;
+        padding-bottom: 32px;
+        @include b(tablet) {
+            padding-bottom: 24px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include b(tablet) {
+            font-size: 14px;
+        }
+    }
+}
