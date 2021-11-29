@@ -47,7 +47,7 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -71,7 +71,7 @@ ul, ol {
 
 a {
     text-decoration: none;
-    color: $main-color;
+    color: currentColor;
     transition: $trs;
 }
 

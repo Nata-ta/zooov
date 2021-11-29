@@ -19,6 +19,11 @@
         background-color: $btn-hover;
     }
 
+    svg {
+        width: 24px;
+        margin-right: 8px;
+    }
+
     &--ghost {
         border: 1px solid $btn-color;
         color: $btn-color;
@@ -43,7 +48,7 @@
     }
 
     &--opacity {
-        padding: 10px 15px;
+        padding: 8px 12px;
         font-size: 14px;
         font-weight: 500;
         background-color: $btn-opacity-color;

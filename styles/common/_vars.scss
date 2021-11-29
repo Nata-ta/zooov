@@ -11,6 +11,7 @@ $white-color: #fff;
 $queen-pink: #EAD1D0;
 $lavender-blush: #FFF4F3;
 $spanish-gray: #9F9E9D;
+$grey: #E5E5E5;
 
 $btn-color: $primary-color;
 $btn-hover: #75110D;
@@ -32,8 +33,8 @@ $desktop-width: 1366px;
   @if ($breakpoints == desktop) {
     @media (max-width: #{$desktop-width}) {
       @content
+      }
     }
-  }
   @if ($breakpoints == tablet) {
     @media (max-width: #{$tablet-width}) {
       @content
@@ -49,6 +50,6 @@ $desktop-width: 1366px;
   } @else {
     @media (max-width: $breakpoints + px) {
       @content
+      }
     }
-  }
 }
