@@ -44,6 +44,10 @@ textarea {
 
             &::before {
                 background-color: $white-color;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='-0.000305176' width='16' height='16' rx='2' fill='white'/%3E%3Cpath d='M3.99976 8.23077L6.99976 11L11.9998 5' stroke='%23961914' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-size: 10px 8px;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
             }
         }
     }
@@ -64,9 +68,6 @@ textarea {
             left: 0;
             top: 0;
             transition: $trs;
-            background-size: 10px 8px;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
         }
     }
 }

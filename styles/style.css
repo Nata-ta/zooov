@@ -183,6 +183,10 @@ textarea {
 }
 .checkbox input:checked + span::before {
   background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='-0.000305176' width='16' height='16' rx='2' fill='white'/%3E%3Cpath d='M3.99976 8.23077L6.99976 11L11.9998 5' stroke='%23961914' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 10px 8px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .checkbox span {
   display: inline-block;
@@ -200,9 +204,6 @@ textarea {
   left: 0;
   top: 0;
   transition: all 0.3s;
-  background-size: 10px 8px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
 }
 
 .hero {
@@ -867,6 +868,7 @@ textarea {
   color: #fff;
   padding: 80px 0;
   margin-top: 175px;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .footer {
@@ -874,13 +876,35 @@ textarea {
     margin-top: 20px;
   }
 }
+.footer__left-svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 296px;
+  max-height: 353px;
+}
+.footer__right-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 296px;
+  max-height: 353px;
+}
 .footer__wrap {
   display: flex;
+  position: relative;
 }
 @media (max-width: 767px) {
   .footer__wrap {
     flex-direction: column;
   }
+}
+.footer__wrap-apple {
+  position: absolute;
+  right: -50px;
+  bottom: -40px;
+  max-width: 104px;
+  max-height: 103px;
 }
 .footer__contacts {
   width: 302px;
@@ -888,11 +912,13 @@ textarea {
 @media (max-width: 767px) {
   .footer__contacts {
     width: 100%;
+    margin-bottom: 56px;
   }
 }
 .footer__form {
   width: calc(100% - 302px);
   padding: 0 7% 0 15%;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .footer__form {
@@ -905,8 +931,27 @@ textarea {
     padding: 0;
   }
 }
+.footer__form-dog {
+  position: absolute;
+  top: -14px;
+  left: 50px;
+  width: 110px;
+  height: 110px;
+}
+.footer__form-meat {
+  position: absolute;
+  top: 143px;
+  left: 6px;
+  width: 134px;
+  height: 133px;
+}
 .footer__caption {
   margin-bottom: 8px;
+}
+@media (max-width: 1024px) {
+  .footer__caption {
+    margin-bottom: 10px;
+  }
 }
 .footer__info {
   margin-bottom: 32px;
