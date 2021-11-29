@@ -17,14 +17,23 @@
        bottom: 0;
        max-width: 296px;
        max-height: 353px;
+       @include b(mobile) {
+        top: -119px;
+        left: calc(100% - 179px);
+        transform: rotate(106deg);
+        }
     }
 
     &__right-svg {
         position: absolute;
        right: 0;
        top: 0;
-       max-width: 296px;
-       max-height: 353px; 
+       max-width: 318px;
+       max-height: 393px;
+       @include b(mobile) {
+            top: calc(100% - 353px);
+            transform: rotate(90deg);
+        }
     }
 
     &__wrap {
@@ -40,6 +49,16 @@
             bottom: -40px;
             max-width: 104px;
             max-height: 103px;
+            @include b(tablet) {
+                right: -22px;
+                bottom: -26px;
+            }
+            @include b(mobile) {
+                bottom: -122px;
+                left: 0;
+            }
+
+            
         }
     }
 
@@ -69,6 +88,13 @@
             left: 50px;
             width: 110px;
             height: 110px;
+            @include b(tablet) {
+                left: -19px;
+            }
+            @include b(mobile) {
+                top: -272px;
+                left: 70%;
+            }
         }
         
         &-meat {
@@ -77,6 +103,13 @@
             left: 6px;
             width: 134px;
             height: 133px;
+            @include b(tablet) {
+                left: -50px;
+            }
+            @include b(mobile) {
+                top: -78px;
+                left: 65%;
+            }
         }
     }
 
