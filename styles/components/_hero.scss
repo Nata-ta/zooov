@@ -16,23 +16,135 @@
         align-items: center;
     }
 
+    &__header-btn-menu {
+        width: 27px;
+        height: 22px;
+        margin-right: 15px;
+        position: relative;
+        display: none;
+        @include b(tablet) {
+            display: block;
+            z-index: 3;
+        }
+
+        &--open {
+        
+            .hero__header-btn-line:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+                background-color: $main-color;
+            }
+
+            .hero__header-btn-line:nth-child(2) {
+                display: none;
+            }
+
+            .hero__header-btn-line:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 9px;
+                background-color: $main-color;
+            }
+        }
+    }
+
+    &__header-btn-line {
+        position: absolute;
+        width: 27px;
+        height: 2px;
+        background-color: $white-color;
+        left: 0;
+        transition: all .3s;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+        
+        &:nth-child(2) {
+            top: 10px;
+        }
+        
+        &:nth-child(3) {
+            top: 20px;
+        }
+    }
+
     &__logo {
         line-height: 0;
+        @include b(tablet) {
+            z-index: 3;
+        }
+    }
+
+    &__nav {
+        transition: $trs;
+        position: relative;
+        @include b(tablet) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $white-color;
+            width: 320px;
+            z-index: 2;
+            padding: 120px 0;
+            transform: translateX(320px);
+        }
+        @include b(mobile) {
+            width: 100%;
+            transform: translateX(100%);
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+
+        &-left-decor {
+            display: none;
+            @include b(tablet) {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 170px;
+            }
+        }
+        
+        &-right-decor {
+            display: none;
+            @include b(tablet) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 45px;
+            }
+        }
     }
 
     &__nav-list {
         display: flex;
         justify-content: space-between;
+        @include b(tablet) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__nav-item {
         padding: 0 25px;
+        @include b(tablet) {
+            margin: 20px;
+        }
     }
 
     &__nav-link {
         font-weight: 500;
         color: $white-color;
         position: relative;
+        @include b(tablet) {
+            font-weight: 600;
+            font-size: 24px;
+            color: $main-color;
+        }
 
         &::before {
             position: absolute;
@@ -66,14 +178,17 @@
         color: $white-color;
         max-width: 481px;
         margin-bottom: 10px;
+    }
+
+    &__ellipse-cover {
         position: relative;
         z-index: 1;
     }
 
     &__ellipse {
         position: absolute;
-        top: 60px;
-        left: 221px;
+        top: -15px;
+        left: -8px;
         width: 260px;
         height: 92px;
         z-index: -1;
@@ -84,14 +199,23 @@
         font-size: 20px;
         color: $white-color;
         margin-bottom: 38px;
+        padding-right: 60px;
     }
 
     &__zooov {
         position: absolute;
         top: 160px;
         right: 0;
-        width: 168px;
-        height: 548px;
+        max-width: 168px;
+        max-height: 548px;
+        @include b(tablet) {
+            top: 300px;
+        }
+        @include b(mobile) {
+            top: 518px;
+            width: 156px;
+            height: 334px;
+        }
     }
     
 }
