@@ -209,10 +209,10 @@
         max-width: 168px;
         max-height: 548px;
         @include b(tablet) {
-            top: 300px;
+            top: 0;
         }
         @include b(mobile) {
-            top: 518px;
+            top: calc(100% - 334px);
             width: 156px;
             height: 334px;
         }

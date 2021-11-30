@@ -18,20 +18,21 @@
        max-width: 296px;
        max-height: 353px;
        @include b(mobile) {
-        top: -119px;
-        left: calc(100% - 179px);
-        transform: rotate(106deg);
+        top: -118px;
+        left: calc(100% - 237px);
+        transform: rotate(90deg);
         }
     }
 
     &__right-svg {
-        position: absolute;
+       position: absolute;
        right: 0;
        top: 0;
-       max-width: 318px;
-       max-height: 393px;
+       max-width: 275px;
+       max-height: 338px;
        @include b(mobile) {
-            top: calc(100% - 353px);
+            right: 32px;
+            top: calc(100% - 307px);
             transform: rotate(90deg);
         }
     }
@@ -45,7 +46,7 @@
 
         &-apple {
             position: absolute;
-            right: -50px;
+            right: -15px;
             bottom: -40px;
             max-width: 104px;
             max-height: 103px;
@@ -95,6 +96,10 @@
                 top: -272px;
                 left: 70%;
             }
+            @include b(mobile-sm) {
+                width: 100px;
+                height: 100px;
+            }
         }
         
         &-meat {
@@ -109,6 +114,10 @@
             @include b(mobile) {
                 top: -78px;
                 left: 65%;
+            }
+            @include b(mobile-sm) {
+                width: 100px;
+                height: 100px;
             }
         }
     }
