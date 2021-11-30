@@ -1,0 +1,84 @@
+@import '../common/vars';
+
+.delivery {
+    padding: 90px 0 100px;
+    @include b(mobile) {
+        padding: 80px 0 40px;
+    }
+
+    &__caption {
+        margin-bottom: 80px;
+        @include b(mobile) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+        position: relative;
+        z-index: 1;
+        @include b(mobile) {
+            flex-wrap: wrap;
+        }
+        @include b(mobile-sm) {
+           padding-left: 34px;
+        }
+
+    &-line {
+        display: none;
+        @include b(mobile-sm) {
+            display: block;
+            position: absolute;
+            left: 10px;
+            z-index: -1;
+         }
+    }
+    }
+
+    &__col {
+        padding: 0 15px 45px;
+        max-width: calc(100% / 4);
+        @include b(mobile) {
+            max-width: 50%;
+        }
+        @include b(mobile-sm) {
+            max-width: 100%;
+        }
+        
+        &-svg {
+            width: 40px;
+            height: 40px;
+            color: $primary-color;
+        }
+
+        &-arrow {
+           color: $queen-pink;
+           max-width: 139px;
+           @include b(mobile-sm) {
+            display: none;
+         }
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        max-width: 284px;
+    }
+    
+    &__link {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}

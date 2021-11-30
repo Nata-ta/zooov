@@ -1,0 +1,56 @@
+@import '../common/vars';
+
+.data {
+    padding: 90px 0 110px;
+    position: relative;
+    z-index: 1;
+
+    &__line {
+        position: absolute;
+        top: 170px;
+        max-width: 100%;
+        z-index: -1;
+        @include b(mobile) {
+            display: none;
+        }
+    }
+
+    &__caption {
+        margin-bottom: 63px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+        @include b(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__col {
+        padding: 0 15px 20px;
+        max-width: calc(100% / 4);
+        @include b(mobile) {
+            max-width: 50%;
+        }
+        @include b(mobile-sm) {
+            max-width: 100%;
+        }
+        
+        &-svg {
+            width: 40px;
+            height: 40px;
+            color: $primary-color;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        max-width: 280px;
+    }
+}
