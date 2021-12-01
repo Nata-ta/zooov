@@ -421,21 +421,47 @@ textarea {
 .about {
   padding: 90px 0 40px;
 }
+@media (max-width: 767px) {
+  .about {
+    padding: 80px 0 0;
+  }
+}
 .about__wrap {
   display: flex;
   align-items: center;
   margin: 0 -14px;
 }
+@media (max-width: 767px) {
+  .about__wrap {
+    display: block;
+    margin-bottom: -7px;
+  }
+}
 .about__col {
   width: 50%;
   padding: 0 14px;
 }
+@media (max-width: 767px) {
+  .about__col {
+    width: 100%;
+  }
+}
 .about__caption {
   margin-bottom: 32px;
+}
+@media (max-width: 767px) {
+  .about__caption {
+    margin-bottom: 24px;
+  }
 }
 .about__descr {
   color: #434242;
   margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .about__list {
+    margin-bottom: 40px;
+  }
 }
 .about__title {
   margin-bottom: 16px;
@@ -463,11 +489,22 @@ textarea {
 .ingredients {
   padding: 40px 0 100px;
 }
+@media (max-width: 1024px) {
+  .ingredients {
+    padding: 0 0 45px;
+  }
+}
 .ingredients__outer {
   padding: 32px 80px;
   background-color: #EAD1D0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 1024px) {
+  .ingredients__outer {
+    padding: 56px 50px 72px;
+    margin: 0 auto;
+  }
 }
 .ingredients__outer-line {
   position: absolute;
@@ -475,13 +512,29 @@ textarea {
   left: 0;
   z-index: -1;
 }
+@media (max-width: 767px) {
+  .ingredients__outer-line {
+    display: none;
+  }
+}
 .ingredients__wrap {
   display: flex;
   margin: 0 -14px;
 }
+@media (max-width: 1024px) {
+  .ingredients__wrap {
+    flex-wrap: wrap;
+  }
+}
 .ingredients__col {
   width: 50%;
   padding: 0 14px;
+}
+@media (max-width: 1024px) {
+  .ingredients__col {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 .ingredients__title {
   font-size: 14px;
@@ -494,13 +547,35 @@ textarea {
 .ingredients__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 450px;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .ingredients__list {
+    justify-content: space-between;
+  }
 }
 .ingredients__item {
   width: 50%;
   display: flex;
   align-items: center;
   margin-bottom: 26px;
+}
+@media (max-width: 1024px) {
+  .ingredients__item {
+    width: 33%;
+    margin-bottom: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .ingredients__item {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .ingredients__item {
+    width: 100%;
+  }
 }
 .ingredients__icon {
   width: 20px;
@@ -509,6 +584,13 @@ textarea {
 }
 .ingredients__text {
   color: #434242;
+}
+@media (max-width: 1024px) {
+  .ingredients__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.5;
+  }
 }
 
 .order {
