@@ -502,7 +502,7 @@ textarea {
 }
 @media (max-width: 1024px) {
   .ingredients__outer {
-    padding: 56px 50px 72px;
+    padding: 50px 40px;
     margin: 0 auto;
   }
 }
@@ -939,16 +939,16 @@ textarea {
 }
 .delivery__col {
   padding: 0 15px 45px;
-  max-width: 25%;
+  width: 25%;
 }
 @media (max-width: 767px) {
   .delivery__col {
-    max-width: 50%;
+    width: 50%;
   }
 }
 @media (max-width: 479px) {
   .delivery__col {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .delivery__col-svg {

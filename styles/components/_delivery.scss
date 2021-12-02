@@ -39,12 +39,12 @@
 
     &__col {
         padding: 0 15px 45px;
-        max-width: calc(100% / 4);
+        width: calc(100% / 4);
         @include b(mobile) {
-            max-width: 50%;
+            width: 50%;
         }
         @include b(mobile-sm) {
-            max-width: 100%;
+            width: 100%;
         }
         
         &-svg {
