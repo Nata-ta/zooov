@@ -502,7 +502,7 @@ textarea {
 }
 @media (max-width: 1024px) {
   .ingredients__outer {
-    padding: 50px 40px;
+    padding: 56px 40px;
     margin: 0 auto;
   }
 }
