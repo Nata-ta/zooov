@@ -22,13 +22,16 @@
         margin-right: 15px;
         position: relative;
         display: none;
+
         @include b(tablet) {
             display: block;
             z-index: 3;
         }
 
         &--open {
-        
+            position: fixed;
+            right: 15px;
+
             .hero__header-btn-line:nth-child(1) {
                 transform: rotate(45deg);
                 top: 9px;
@@ -58,11 +61,11 @@
         &:nth-child(1) {
             top: 0;
         }
-        
+
         &:nth-child(2) {
             top: 10px;
         }
-        
+
         &:nth-child(3) {
             top: 20px;
         }
@@ -70,6 +73,7 @@
 
     &__logo {
         line-height: 0;
+
         @include b(tablet) {
             z-index: 3;
         }
@@ -78,6 +82,7 @@
     &__nav {
         transition: $trs;
         position: relative;
+
         @include b(tablet) {
             position: fixed;
             top: 0;
@@ -89,6 +94,7 @@
             padding: 120px 0;
             transform: translateX(320px);
         }
+
         @include b(mobile) {
             width: 100%;
             transform: translateX(100%);
@@ -100,21 +106,23 @@
 
         &-left-decor {
             display: none;
+
             @include b(tablet) {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 170px;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 170px;
             }
         }
-        
+
         &-right-decor {
             display: none;
+
             @include b(tablet) {
-            display: block;
-            position: absolute;
-            right: 0;
-            bottom: 45px;
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 45px;
             }
         }
     }
@@ -122,6 +130,7 @@
     &__nav-list {
         display: flex;
         justify-content: space-between;
+
         @include b(tablet) {
             flex-direction: column;
             justify-content: center;
@@ -131,15 +140,18 @@
 
     &__nav-item {
         padding: 0 25px;
+
         @include b(tablet) {
-            margin: 20px;
+            padding: 20px 0;
         }
     }
 
     &__nav-link {
+        display: inline-block;
         font-weight: 500;
         color: $white-color;
         position: relative;
+
         @include b(tablet) {
             font-weight: 600;
             font-size: 24px;
@@ -208,14 +220,16 @@
         right: 0;
         max-width: 168px;
         max-height: 548px;
+
         @include b(tablet) {
             top: 0;
         }
+
         @include b(mobile) {
             top: calc(100% - 334px);
             width: 156px;
             height: 334px;
         }
     }
-    
+
 }
