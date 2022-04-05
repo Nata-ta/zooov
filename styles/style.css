@@ -233,6 +233,10 @@ textarea {
     z-index: 3;
   }
 }
+.hero__header-btn-menu--open {
+  position: fixed;
+  right: 15px;
+}
 .hero__header-btn-menu--open .hero__header-btn-line:nth-child(1) {
   transform: rotate(45deg);
   top: 9px;
@@ -335,10 +339,11 @@ textarea {
 }
 @media (max-width: 1024px) {
   .hero__nav-item {
-    margin: 20px;
+    padding: 20px 0;
   }
 }
 .hero__nav-link {
+  display: inline-block;
   font-weight: 500;
   color: #fff;
   position: relative;
